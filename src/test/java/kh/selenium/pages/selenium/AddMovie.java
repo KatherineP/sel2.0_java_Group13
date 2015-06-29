@@ -10,7 +10,8 @@ public class AddMovie extends kh.selenium.pages.TestBase {
 
     @Test
     public void add() throws Exception {
-           loginTest.login();
+        loginTest.init();
+        loginTest.login();
 
         driver.findElement(By.cssSelector("img[alt=\"Add movie\"]")).click();
         WebElement addTitle = driver.findElement(By.name("name"));
