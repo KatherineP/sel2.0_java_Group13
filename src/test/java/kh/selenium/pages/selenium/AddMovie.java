@@ -3,6 +3,8 @@ package kh.selenium.pages.selenium;
 import org.openqa.selenium.*;
 import org.testng.annotations.Test;
 
+import static org.junit.Assert.assertTrue;
+
 public class AddMovie extends kh.selenium.pages.TestBase {
     private boolean acceptNextAlert = true;
     private StringBuffer verificationErrors = new StringBuffer();
@@ -12,10 +14,10 @@ public class AddMovie extends kh.selenium.pages.TestBase {
     public void add() throws Exception {
         login();
         driver.findElement(By.cssSelector("img[alt=\"Add movie\"]")).click();
-        WebElement addTitle = driver.findElement(By.name("name"));
+        WebElement addTitle = driver.findElement(By.name("name")); //requirement field
         addTitle.clear();
         addTitle.sendKeys("Test movie");
-        WebElement addYear = driver.findElement(By.name("year"));
+        WebElement addYear = driver.findElement(By.name("year")); //requirement field
         addYear.clear();
         addYear.sendKeys("2015");
         WebElement addNotes = driver.findElement(By.name("notes"));
@@ -28,6 +30,9 @@ public class AddMovie extends kh.selenium.pages.TestBase {
         addVideo.clear();
         addVideo.sendKeys("test");
         driver.findElement(By.id("submit")).click();
+        WebElement deleteMovie = driver.findElement(By.xpath("//img[@alt='Remove']"));
+        deleteMovie.click();
+        assertTrue(closeAlertAndGetItsText().matches("^Are you sure you want to remove this[\\s\\S]$"));
         logout();
     }
 

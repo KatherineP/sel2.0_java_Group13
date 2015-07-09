@@ -17,9 +17,8 @@ public class LogoutTest extends kh.selenium.pages.TestBase {
     @Test
     public void logoutTest() throws Exception {
         logout();
-        assertTrue(closeAlertAndGetItsText().matches("Are you sure you want to log out?"));
+        assertTrue(closeAlertAndGetItsText().matches("^Are you sure you want to log out[\\s\\S]$")); //почему мы не можем написать просто "Are you sure you want to log out?"
     }
-
     private boolean isElementPresent(By by) {
         try {
             driver.findElement(by);
