@@ -5,9 +5,7 @@ import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
 import org.openqa.selenium.remote.Augmenter;
 import org.openqa.selenium.remote.ScreenshotException;
 import org.testng.ITestResult;
@@ -18,6 +16,8 @@ import org.testng.annotations.BeforeClass;
 import kh.selenium.util.PropertyLoader;
 import kh.selenium.util.Browser;
 import kh.selenium.webdriver.WebDriverFactory;
+
+import static org.junit.Assert.assertTrue;
 
 /*
  * Base class for all the test classes
@@ -61,6 +61,22 @@ public class TestBase {
 			driver.quit();
 		}
 	}
+
+    public void login() throws Exception {
+        driver.get(baseUrl + "/php4dvd/");
+        WebElement usernameField = driver.findElement(By.id("username"));
+        usernameField.clear();
+        usernameField.sendKeys("admin");
+        WebElement passwordField = driver.findElement(By.name("password"));
+        passwordField.clear();
+        passwordField.sendKeys("admin");
+        driver.findElement(By.name("submit")).click();
+    }
+    public void logout() throws Exception {
+        driver.get(baseUrl + "/php4dvd/");
+        driver.findElement(By.xpath("//div/nav/ul/li[4]/a")).click();
+
+    }
 
 //	@AfterMethod
 //	public void setScreenshot(ITestResult result) {

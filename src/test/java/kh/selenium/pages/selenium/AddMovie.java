@@ -6,13 +6,11 @@ import org.testng.annotations.Test;
 public class AddMovie extends kh.selenium.pages.TestBase {
     private boolean acceptNextAlert = true;
     private StringBuffer verificationErrors = new StringBuffer();
-    LoginTest loginTest = new LoginTest();
+
 
     @Test
     public void add() throws Exception {
-        loginTest.init();
-        loginTest.login();
-
+        login();
         driver.findElement(By.cssSelector("img[alt=\"Add movie\"]")).click();
         WebElement addTitle = driver.findElement(By.name("name"));
         addTitle.clear();
@@ -30,6 +28,7 @@ public class AddMovie extends kh.selenium.pages.TestBase {
         addVideo.clear();
         addVideo.sendKeys("test");
         driver.findElement(By.id("submit")).click();
+        logout();
     }
 
     private boolean isElementPresent(By by) {
