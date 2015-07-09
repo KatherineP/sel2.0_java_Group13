@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 import static org.junit.Assert.assertTrue;
 
-public class AddMovie extends kh.selenium.pages.TestBase {
+public class AddMovieWithReqField extends kh.selenium.pages.TestBase {
     private boolean acceptNextAlert = true;
     private StringBuffer verificationErrors = new StringBuffer();
 
