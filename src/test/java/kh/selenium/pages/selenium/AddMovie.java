@@ -17,7 +17,7 @@ public class AddMovie extends kh.selenium.pages.TestBase {
         driver.findElement(By.cssSelector("img[alt=\"Add movie\"]")).click();
         WebElement addTitle = driver.findElement(By.name("name"));            //requirement field
         addTitle.clear();
-        addTitle.sendKeys("Test movie");
+        addTitle.sendKeys("Mivie44");
         WebElement addNotes = driver.findElement(By.name("notes"));
         addNotes.clear();
         addNotes.sendKeys("test");
@@ -39,7 +39,7 @@ public class AddMovie extends kh.selenium.pages.TestBase {
 
         logout();
     }
-    //This field is required
+
     private boolean isElementPresent(By by) {
         try {
             driver.findElement(by);
