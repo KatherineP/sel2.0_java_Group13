@@ -22,9 +22,10 @@ public class SearchMovie extends kh.selenium.pages.TestBase {
         driver.navigate().refresh();
         WebDriverWait wait = new WebDriverWait(driver, 30);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='movie_cover']/div[@title ='movie43']")));
+        //ниже сделаем проверку, что хотя бы один элемент с таким именем найден(первый)
         assertTrue(isElementPresent(By.xpath("//div[@class='movie_cover']/div[@title ='movie43']")));
         driver.findElement(By.xpath("//div[@class='movie_cover']/div[@title ='movie43']")).click(); //тут проверим что на элемент можно кликнуть. А значит от ТОЧНО появился.
-        //ниже сделаем проверку, что хотя бы один элемент с таким именем найден(первый)
+
 
 
     }
