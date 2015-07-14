@@ -1,6 +1,8 @@
 package kh.selenium.pages.selenium;
 
 import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 import static org.junit.Assert.assertTrue;
@@ -16,8 +18,12 @@ public class SearchMovie extends kh.selenium.pages.TestBase {
         WebElement searchField = driver.findElement(By.xpath("//div[@class='searchbox']/input[1]"));
         searchField.clear();
         searchField.sendKeys("movie43" + Keys.RETURN);
+        driver.navigate().refresh();
+        WebDriverWait wait = new WebDriverWait(driver, 20);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='movie_cover']/div[@title ='movie43']")));
+        driver.findElement(By.xpath("//div[@class='movie_cover']/div[@title ='movie43']")).click(); //тут проверим что на элемент можно кликнуть. А значит от точно появился.
         //ниже сделаем проверку, что хотя бы один элемент с таким именем найден(первый)
-        assertTrue(isElementPresent(By.xpath("//div[@class='movie_cover']/div[@title ='movie43']")));
+        //assertTrue(isElementPresent(By.xpath("//div[@class='movie_cover']/div[@title ='movie43']")));
 
     }
 
