@@ -12,18 +12,20 @@ public class SearchMovie extends kh.selenium.pages.TestBase {
     private StringBuffer verificationErrors = new StringBuffer();
 
 
+
     @Test
     public void search() throws Exception {
         login();
         WebElement searchField = driver.findElement(By.xpath("//div[@class='searchbox']/input[1]"));
         searchField.clear();
-        searchField.sendKeys("movie43" + Keys.RETURN);
+        searchField.sendKeys("test" + Keys.RETURN);
         driver.navigate().refresh();
         WebDriverWait wait = new WebDriverWait(driver, 30);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='movie_cover']/div[@title ='movie43']")));
-        driver.findElement(By.xpath("//div[@class='movie_cover']/div[@title ='movie43']")).click(); //тут проверим что на элемент можно кликнуть. А значит от точно появился.
+        assertTrue(isElementPresent(By.xpath("//div[@class='movie_cover']/div[@title ='movie43']")));
+        driver.findElement(By.xpath("//div[@class='movie_cover']/div[@title ='movie43']")).click(); //тут проверим что на элемент можно кликнуть. А значит от ТОЧНО появился.
         //ниже сделаем проверку, что хотя бы один элемент с таким именем найден(первый)
-        //assertTrue(isElementPresent(By.xpath("//div[@class='movie_cover']/div[@title ='movie43']")));
+
 
     }
 
