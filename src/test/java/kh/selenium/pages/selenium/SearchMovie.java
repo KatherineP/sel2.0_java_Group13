@@ -18,7 +18,7 @@ public class SearchMovie extends kh.selenium.pages.TestBase {
         login();
         WebElement searchField = driver.findElement(By.xpath("//div[@class='searchbox']/input[1]"));
         searchField.clear();
-        searchField.sendKeys("test" + Keys.RETURN);
+        searchField.sendKeys("movie43" + Keys.RETURN);
         driver.navigate().refresh();
         WebDriverWait wait = new WebDriverWait(driver, 30);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='movie_cover']/div[@title ='movie43']")));
