@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0fd40a82-ba0d-4a8f-bc0e-e894803de729" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/kh/selenium/pages/selenium/SearchMovie.java" afterPath="$PROJECT_DIR$/src/test/java/kh/selenium/pages/selenium/SearchMovie.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/application.properties" afterPath="$PROJECT_DIR$/target/classes/application.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="webdriver_java_training.iws" />
@@ -112,8 +112,8 @@
       <file leaf-file-name="SearchMovie.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/kh/selenium/pages/selenium/SearchMovie.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.87384045" vertical-offset="22" max-vertical-offset="663">
-              <caret line="29" column="44" selection-start-line="29" selection-start-column="44" selection-end-line="29" selection-end-column="44" />
+            <state vertical-scroll-proportion="0.62152135" vertical-offset="22" max-vertical-offset="663">
+              <caret line="21" column="56" selection-start-line="21" selection-start-column="56" selection-end-line="21" selection-end-column="56" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#isElementPresent#0;class#SearchMovie#0" expanded="false" />
@@ -845,7 +845,7 @@
       <workItem from="1436460858126" duration="5264000" />
       <workItem from="1436516789535" duration="1527000" />
       <workItem from="1436787787697" duration="6268000" />
-      <workItem from="1436887364914" duration="4934000" />
+      <workItem from="1436887364914" duration="5295000" />
     </task>
     <task id="LOCAL-00001" summary="add LoginTest">
       <created>1435502115686</created>
@@ -919,11 +919,17 @@
       <option name="project" value="LOCAL" />
       <updated>1436796131884</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="SearchMovieUpdate">
+      <created>1436903799786</created>
+      <option name="number" value="00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1436903799786</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46116000" />
+    <option name="totallyTimeSpent" value="46477000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
@@ -983,7 +989,8 @@
     <MESSAGE value="logoutTest was added update" />
     <MESSAGE value="Homework1(Lesson 2)" />
     <MESSAGE value="searchTests" />
-    <option name="LAST_COMMIT_MESSAGE" value="searchTests" />
+    <MESSAGE value="SearchMovieUpdate" />
+    <option name="LAST_COMMIT_MESSAGE" value="SearchMovieUpdate" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1397,8 +1404,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/kh/selenium/pages/selenium/SearchMovie.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.87384045" vertical-offset="22" max-vertical-offset="663">
-          <caret line="29" column="44" selection-start-line="29" selection-start-column="44" selection-end-line="29" selection-end-column="44" />
+        <state vertical-scroll-proportion="0.62152135" vertical-offset="22" max-vertical-offset="663">
+          <caret line="21" column="56" selection-start-line="21" selection-start-column="56" selection-end-line="21" selection-end-column="56" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#isElementPresent#0;class#SearchMovie#0" expanded="false" />
