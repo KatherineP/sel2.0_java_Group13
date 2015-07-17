@@ -1,4 +1,4 @@
-package ru.st.selenium.applogic;
+package kh.selenium.applogic;
 
 public interface NavigationHelper {
 

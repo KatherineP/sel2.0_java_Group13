@@ -1,4 +1,4 @@
-package ru.st.selenium.model;
+package kh.selenium.model;
 
 public class Film {
 

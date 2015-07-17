@@ -1,6 +1,6 @@
-package ru.st.selenium.applogic;
+package kh.selenium.applogic;
 
-import ru.st.selenium.model.User;
+import kh.selenium.model.User;
 
 public interface UserHelper {
 

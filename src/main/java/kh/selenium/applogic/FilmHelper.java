@@ -1,8 +1,8 @@
-package ru.st.selenium.applogic;
+package kh.selenium.applogic;
 
 import java.util.List;
 
-import ru.st.selenium.model.Film;
+import kh.selenium.model.Film;
 
 public interface FilmHelper {
 
