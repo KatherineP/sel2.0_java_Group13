@@ -20,7 +20,7 @@ public class HomePage extends Page {
 	private WebElement h1Element;
 	
 	public HomePage(WebDriver webDriver) {
-		super(webDriver);
+		super((PageManager) webDriver);
 	}
 	
 	public String getH1() {
