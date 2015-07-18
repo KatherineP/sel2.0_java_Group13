@@ -10,12 +10,10 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.openqa.selenium.safari.SafariDriver;
-import org.openqa.selenium.phantomjs.PhantomJSDriver;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
-
+import org.openqa.selenium.safari.SafariDriver;
 import kh.selenium.util.Browser;
 import kh.selenium.webdriver.AuthenticatedHtmlUnitDriver;
 
@@ -31,11 +29,9 @@ public class WebDriverFactory {
 	/* Browsers constants */
 	public static final String CHROME = "chrome";
 	public static final String FIREFOX = "firefox";
-	public static final String OPERA = "opera";
-	public static final String INTERNET_EXPLORER = "ie";
-	public static final String PHANTOMJS = "phantomjs";
-	public static final String HTML_UNIT = "htmlunit";
 	public static final String SAFARI = "safari";
+	public static final String INTERNET_EXPLORER = "ie";
+	public static final String HTML_UNIT = "htmlunit";
 	public static final String IPHONE = "iphone";
 
 	/* Platform constants */
@@ -98,10 +94,12 @@ public class WebDriverFactory {
 			.setCapability(
 					InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS,
 					true);
-		} else if (PHANTOMJS.equals(browserName)) {
-			capability = DesiredCapabilities.phantomjs();
-		}  else if (SAFARI.equals(browserName)) {
+		} else if (SAFARI.equals(browserName)) {
 			capability = DesiredCapabilities.safari();
+		} else if (ANDROID.equals(browserName)) {
+			capability = DesiredCapabilities.android();
+		} else if (IPHONE.equals(browserName)) {
+			capability = DesiredCapabilities.iphone();
 		} else {
 
 			capability = DesiredCapabilities.htmlUnit();
@@ -164,12 +162,6 @@ public class WebDriverFactory {
 
 		} else if (INTERNET_EXPLORER.equals(browser)) {
 			webDriver = new InternetExplorerDriver();
-
-		} else if (SAFARI.equals(browser)) {
-			webDriver = new SafariDriver();
-
-		} else if (PHANTOMJS.equals(browser)) {
-			webDriver = new PhantomJSDriver();
 
 		} else {
 

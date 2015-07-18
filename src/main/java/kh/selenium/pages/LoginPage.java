@@ -6,9 +6,9 @@ import org.openqa.selenium.support.FindBy;
 
 import static org.openqa.selenium.support.ui.ExpectedConditions.*;
 
-public class LoginPage extends kh.selenium.pages.AnyPage {
+public class LoginPage extends AnyPage {
 
-	public LoginPage(kh.selenium.pages.PageManager pages) {
+	public LoginPage(PageManager pages) {
 		super(pages);
 	}
 
