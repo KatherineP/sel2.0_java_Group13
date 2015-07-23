@@ -10,4 +10,5 @@ public interface UserHelper {
 	boolean isLoggedInAs(User user);
 	boolean isNotLoggedIn();
 
+    void createUser(User user);
 }

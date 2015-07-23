@@ -24,7 +24,7 @@ public class InternalPage extends AnyPage {
   @FindBy(css = "nav a[href $= '?go=users']")
   private WebElement userManagementLink;
 
-  @FindBy(css = "nav a[onclick $= '?logout']")
+  @FindBy(css = "nav a[href $= '?logout']")
   private WebElement logoutLink;
   
   public UserProfilePage clickUserProfilePage() {

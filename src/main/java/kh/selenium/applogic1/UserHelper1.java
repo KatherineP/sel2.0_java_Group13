@@ -39,8 +39,18 @@ public class UserHelper1 extends DriverBasedHelper implements UserHelper {
   public boolean isNotLoggedIn() {
     return pages.loginPage.waitPageLoaded();
   }
-  
-  private User getLoggedUser() {
+
+    @Override
+    public void createUser(User user) {
+        pages.internalPage.clickUserManagementLink().ensurePageLoaded()
+                .setUsernameField(user.getLogin())
+                .setEmailField(user.getEmail())
+                .setPassword(user.getPassword())
+                .setPassword2(user.getPassword())
+                .clickSubmitButton();
+    }
+
+    private User getLoggedUser() {
     UserProfilePage userProfile = pages.internalPage
       .clickUserProfilePage()
       .ensurePageLoaded();
